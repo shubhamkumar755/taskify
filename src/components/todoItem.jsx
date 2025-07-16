@@ -27,8 +27,9 @@ function TodoItem({ todo }) {
             />
             <input
                 type="text"
-                className={`border outline-none w-full  bg-transparent  ${isTodoEditable ? "bg-[steelblue] px-2 border-none text-black" : "border-transparent"} 
-                ${todo.completed ? "line-through" : ""}`}
+               className={`outline-none w-full px-2 transition-all duration-200
+    ${isTodoEditable ? "bg-[steelblue] border-none text-black" : "bg-transparent border-transparent"}
+    ${todo.completed ? "line-through" : ""}`}
                 value={todoMsg}
                 onChange={(e) => setTodoMsg(e.target.value)}
                 readOnly={!isTodoEditable}
